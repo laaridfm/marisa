@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin: 0}
+
+/*------------------------------------------------*/
+/*-----------------[RESET]------------------------*/
+/*------------------------------------------------*/
+
+@font-face {
+  font-family: "Pluto Bold";
+  src: url("../font/PlutoSansBold.woff") format("woff"),
+  	   url("../font/PlutoSansBold.ttf") format("ttf"),
+       url("../font/PlutoSansBold.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Pluto Light";
+  src: url("../font/PlutoSansLight.woff") format("woff"),
+  	   url("../font/PlutoSansLight.ttf") format("ttf"),
+       url("../font/PlutoSansLight.eot") format("eot");
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend { margin: 0; padding: 0; border: 0; outline: 0px; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration:none; line-height:normal; }
+body { line-height: 1; }
+blockquote, q {	quotes: none; }
+blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
+:focus { outline: 0px; }
+ins{ text-decoration: none; }
+del{ text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* -------- END RESET ------------*/
+
+body{font-family: 'Lato', sans-serif; font-weight:500; }
+h1 {color:#ec008c; font-size:32px; font-family:"Pluto Bold", Roboto, sans-serif;}
+h3 {color:#000; font-size:25px; font-family:"Pluto Bold", Roboto, sans-serif;}
+p {color: #000; font-size: 16px; font-family: "Pluto Light", Roboto, sans-serif; line-height: 1.8;}
+img {max-width:100%}
+
+.transition {-webkit-transition:all 0.2s ease-in; -moz-transition:all 0.2s ease-in; transition:all 0.2s ease-in;}
+.contentSite {width:90%; max-width:1500px; margin:auto; position:relative; clear:both;}
+.clear {width:100%; clear:both;}
+.flexCenter {width:100%; height:auto; display:flex; flex-wrap:wrap; justify-content:center;}
+.flexBetween {width:100%; height:auto; display:flex; flex-wrap:wrap; justify-content:space-between;}
+
+
+/* BLOCO 1 - COLEÇÃO VERÃO */
+.bloco1 {margin:80px auto;text-align:center;width:60%;}
+.bloco1 h1 {padding-bottom:30px;text-transform:uppercase;}
+/* FIM BLOCO 1 */
+
+/* BLOCO 2 */
+.bloco2, .bloco4 {padding-bottom:80px}
+	.bloco2 .tema, .bloco4 .tema {padding:0 12px; width:48%}
+		.bloco2 .tema a, .bloco3 a, .bloco4 .tema a, .bloco6 .tema a {transition:transform .2s;}
+			.bloco2 .tema a img:hover, .bloco3 a img:hover,
+			.bloco4 .tema a img:hover, .bloco6 .tema a img:hover {transform:scale(1.1); transition:0.2s ease-in;}
+/* FIM BLOCO 2 */
+
+/* BLOCO 3 */
+.bloco3 {margin:0 auto 80px; width:70%}
+/* FIM BLOCO 3 */
+
+/* BLOCO 5 */
+.bloco5 {padding-bottom:80px; text-align:center;}
+	.bloco5 h3 {padding:10px 0}
+	.bloco5 .post {width:32%}
+	.bloco5 .post p {line-height:1.5}
+	.bloco5 .post a {background:#ffa5d4; color:#fff; display:block; font-weight: bold; margin:15px auto 0; padding:10px;
+		text-align:center; text-transform:uppercase; width: 180px}
+/* FIM BLOCO 5 */
+
+/* BLOCO 6 */
+.bloco6 {padding-bottom:30px;}
+	.bloco6 .tema {padding:0 12px; width: 48%}
+	.bloco6 .tema a:first-child {display:block; padding-bottom:22px;}
+/*FIM BLOCO 6 */
+
+@media screen and (max-width: 1335px){
+	.bloco2 .tema, .bloco4 .tema, .bloco6 .tema {width:45%;}	
+}
+
+@media screen and (max-width: 1000px){
+	.bloco1 {margin:50px auto; width:80%;}
+	.bloco3 {margin:0 auto 50px; width:100%}
+	.bloco5 .post {width:49%}
+	.bloco5 .post:last-child{padding-top:20px; width:100%}
+}
+
+@media screen and (max-width: 600px){
+	h1 {font-size:22px;}
+	h3 {font-size:18px;}
+	.flexBetween {display:inherit;}
+	.bloco1 {margin:40px 0; width:100%;}
+	.bloco2 .tema, .bloco4 .tema {padding:inherit; width:inherit;}
+	.bloco3 {margin:0 auto 40px; width:100%}
+	.bloco5 .post {padding-bottom:20px; width:100%}
+	.bloco6 .tema {width:100%}
+}
